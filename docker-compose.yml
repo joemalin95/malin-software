@@ -37,7 +37,7 @@ services:
     volumes:
       - /var/certbot-etc:/etc/letsencrypt
       - ./wordpress:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email joe@malin.software --agree-tos --no-eff-email -d malin.software -d www.malin.software -d joe.malin.software -d joemalin.com -d www.joemalin.com
+    command: certonly --force-renewal --webroot --webroot-path=/var/www/html --email joe@malin.software --agree-tos --no-eff-email -d malin.software -d joe.malin.software 
 
   wordpress:
     depends_on:
